@@ -1,27 +1,52 @@
 programa
 {
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
-		caracter sexo[]
-		cadeia nome[4]
-		para(inteiro i=  0; i < 4; i++){
-			escreva("Qual seu nome? \n")
-			leia(nome[i])
-			escreva("Qual seu sexo? \n")
-			leia(sexo[i])
+		
+		inteiro contador =0
+		cadeia nome,sexo, homem[5], mulher[5], listaFormada[5]
+		
+		enquanto (contador < 5){
+			
+		escreva("Escreva seu nome? \n")
+		leia(nome)
+		
+		escreva("Qual seu sexo ? (M/F)")
+		leia(sexo)
+		
+		se(sexo == "f"){
+			mulher[contador] = nome
+			}
+			
+			senao se(sexo == "m"){
+				homem[contador] = nome
+				}
+				
+			contador++
+	
 		}
-		para(inteiro i=0; i > 4;i++ ){
-			escreva(nome[i])
+
+		para(inteiro i = 0; i < 3; i++){
+			listaFormada[i] = mulher[i]+" ,"
+			
 		}
-	}
-}
+		para(inteiro i=2; i <5; i++ ){
+			listaFormada[i] = homem[i]+" ,"
+		}
+
+		para(inteiro i = 0; i < 5; i++){
+			escreva(listaFormada[i])
+		}
+		
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 209; 
+ * @POSICAO-CURSOR = 642; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
