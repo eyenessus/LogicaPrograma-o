@@ -5,12 +5,12 @@ programa
 			
 			se(  quantiMin >= quantidade){
 				resultado = resultado/desconto
-				//escreva("O serviço de "+empresa+ " custará R$ "+ resultado)
+				
 				retorne resultado
 				}
 				
 				senao{
-				//escreva("O serviço de "+empresa+ " custará R$ "+ resultado)
+				
 				retorne resultado
 					}
 				
@@ -57,11 +57,18 @@ programa
 				empresMin = empresa
 				
 			}senao se(valorNovo > valorAnterior){
+				se(valorAnterior != 0){
+					min = valorAnterior
+					empresMin = empresa
+				}senao{
+					min = valorNovo
+					empresMin = empresa
+				}
 				
-				valorAnterior = valorNovo
+				
 				
 			}
-
+			
 			escreva("O serviço de "+empresa +" custará R$ "+ valorNovo)
 			escreva("\n DESEJA CONTINUA (S/N)")
 			
@@ -86,7 +93,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1128; 
+ * @POSICAO-CURSOR = 1289; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
